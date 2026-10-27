@@ -1,0 +1,531 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Ch 9 Drug Classifications Lesson</title>
+<meta name="description" content="PTCE Chapter 9: Drug Classifications &amp; Formulations. 18-minute audio lesson, summary, 30 drug cards and a 40-question quiz.">
+<meta name="theme-color" content="#0f766e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ch 9 Rx">
+</head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: a prescription-label header, a sticky tab strip, then one working panel per tab (listen / summary / drug deck / quiz). */
+:root{
+  --bg:#eef3f3; --surface:#ffffff; --surface-2:#e3ecec; --line:#c9d8d8;
+  --fg:#15282b; --muted:#566e71;
+  --teal:#0f766e; --teal-ink:#ffffff; --teal-soft:#d3ecea;
+  --amber:#b45309; --amber-soft:#fcecd4;
+  --good:#15803d; --good-soft:#dcf3e3; --bad:#b42318; --bad-soft:#fbe2df;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1719; --surface:#142326; --surface-2:#1b2f33; --line:#2a4448;
+  --fg:#e3eeee; --muted:#93acae;
+  --teal:#2dd4bf; --teal-ink:#062a26; --teal-soft:#123c38;
+  --amber:#f5a524; --amber-soft:#3a2a10;
+  --good:#4ade80; --good-soft:#123522; --bad:#f87171; --bad-soft:#3d1717; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1719; --surface:#142326; --surface-2:#1b2f33; --line:#2a4448;
+  --fg:#e3eeee; --muted:#93acae;
+  --teal:#2dd4bf; --teal-ink:#062a26; --teal-soft:#123c38;
+  --amber:#f5a524; --amber-soft:#3a2a10;
+  --good:#4ade80; --good-soft:#123522; --bad:#f87171; --bad-soft:#3d1717; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--f-body)}
+.wrap{max-width:920px;margin:0 auto;padding-inline:16px;padding-block:20px 60px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.15;margin:0}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+/* Rx label header */
+.label{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:18px 20px;display:grid;gap:10px;position:relative;overflow:hidden}
+.label::before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:repeating-linear-gradient(180deg,var(--teal) 0 14px,var(--amber) 14px 22px)}
+.label-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:500 12px/1.4 var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.label h1{font-size:clamp(26px,5vw,40px);font-weight:800}
+.label h1 span{color:var(--teal)}
+.label p{margin:0;color:var(--muted);max-width:62ch}
+.sig{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 12px/1 var(--f-mono);padding:6px 9px;border-radius:99px;background:var(--surface-2);color:var(--fg);border:1px solid var(--line)}
+.chip.amber{background:var(--amber-soft);color:var(--amber);border-color:transparent}
+
+/* tabs */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:6px;padding-block:12px;overflow-x:auto;scrollbar-width:none}
+.tab{flex:0 0 auto;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:8px 16px;font-weight:700}
+.tab[aria-selected="true"]{background:var(--teal);color:var(--teal-ink);border-color:var(--teal)}
+.panel{display:grid;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
+
+/* player */
+.player{display:grid;gap:14px}
+.now{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.now h2{font-size:22px}
+.time{font:500 14px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{position:relative;height:14px;border-radius:99px;background:var(--surface-2);cursor:pointer;touch-action:none}
+.bar .fill{position:absolute;inset:0 auto 0 0;background:var(--teal);border-radius:99px;width:0}
+.bar .tick{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--amber);opacity:.8}
+.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.btn{border:1.5px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:9px 14px;font-weight:700}
+.btn:hover{border-color:var(--teal)}
+.btn.primary{background:var(--teal);color:var(--teal-ink);border-color:var(--teal)}
+.play{width:58px;height:58px;border-radius:50%;border:0;background:var(--teal);color:var(--teal-ink);display:grid;place-items:center}
+.play svg{width:24px;height:24px;fill:currentColor}
+.speed{display:flex;gap:4px;margin-left:auto}
+.speed button{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:6px;padding:6px 8px;font:500 12px var(--f-mono)}
+.speed button[aria-pressed="true"]{background:var(--amber-soft);color:var(--amber);border-color:var(--amber)}
+.autostart{display:grid;gap:4px;text-align:left;width:100%;border:2px dashed var(--amber);background:var(--amber-soft);color:var(--fg);border-radius:var(--r);padding:14px 16px;animation:pulse 1.6s ease-in-out infinite}
+.autostart b{font:800 18px/1.2 var(--f-display);color:var(--amber)}
+.autostart span{font-size:14px;color:var(--muted)}
+@keyframes pulse{50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--amber) 22%,transparent)}}
+@media (prefers-reduced-motion:reduce){.autostart{animation:none}}
+.autotoggle{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);cursor:pointer}
+.autotoggle input{width:18px;height:18px;accent-color:var(--teal)}
+.parts{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.parts button{width:100%;display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:10px 12px}
+.parts .n{font:500 13px var(--f-mono);color:var(--muted)}
+.parts .t{font:500 13px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.parts button.on{border-color:var(--teal);background:var(--teal-soft)}
+.parts button.on .n{color:var(--teal)}
+.downloads{display:flex;gap:10px;flex-wrap:wrap}
+.note{font-size:14px;color:var(--muted);margin:0}
+details summary{cursor:pointer;font-weight:700}
+.transcript{max-height:420px;overflow:auto;padding-right:6px;margin-top:10px}
+.transcript h3{font-size:16px;margin:14px 0 4px;color:var(--teal)}
+.transcript p{margin:0 0 8px;max-width:68ch}
+
+/* summary */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.sgrid .card h3{font-size:18px;margin-bottom:8px}
+.sgrid ul{margin:0;padding-left:18px}
+.sgrid li{margin-bottom:4px}
+.adme{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.adme div{background:var(--surface-2);border-radius:8px;padding:12px;min-width:0}
+.adme b{display:block;font:800 30px/1 var(--f-display);color:var(--teal)}
+.adme span{font-size:13px;color:var(--muted)}
+@media (max-width:560px){.adme{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.temps{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.temps td,.temps th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+.temps th{font:500 12px var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tbl{overflow-x:auto}
+.warn{background:var(--amber-soft);border-radius:var(--r);padding:14px 16px}
+.warn b{color:var(--amber)}
+
+/* drug deck */
+.deck-tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.flip{perspective:900px;border:0;background:none;padding:0;min-height:170px;text-align:left;color:var(--fg)}
+.flip .in{position:relative;width:100%;height:100%;min-height:170px;transition:transform .45s;transform-style:preserve-3d}
+.flip.on .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:6px;background:var(--surface)}
+.face.back{transform:rotateY(180deg);background:var(--teal-soft)}
+.face .cls{font:500 11px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--amber)}
+.face .g{font:800 21px/1.15 var(--f-display)}
+.face .b{color:var(--muted)}
+.face .hint{margin-top:auto;font-size:12px;color:var(--muted)}
+.face .k{font-size:14px}
+@media (prefers-reduced-motion:reduce){.flip .in{transition:none}}
+
+/* quiz */
+.qhead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.meter{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--teal);width:0;transition:width .3s}
+.q{font:700 19px/1.4 var(--f-body);margin:0}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:11px 14px}
+.opt:hover:not(:disabled){border-color:var(--teal)}
+.opt.right{background:var(--good-soft);border-color:var(--good)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad)}
+.opt:disabled{cursor:default}
+.explain{border-left:4px solid var(--teal);padding:8px 12px;background:var(--surface-2);border-radius:0 8px 8px 0}
+.score{font:800 56px/1 var(--f-display);color:var(--teal);font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font:700 13px var(--f-mono);padding:5px 10px;border-radius:99px}
+.pill.pass{background:var(--good-soft);color:var(--good)}
+.pill.fail{background:var(--bad-soft);color:var(--bad)}
+.key ol{padding-left:22px;margin:0}
+.key li{margin-bottom:10px}
+.key .a{color:var(--good);font-weight:700}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px)}
+</style>
+
+<div class="wrap">
+  <header class="label">
+    <div class="label-top"><span>PTCE Online · Rx Study Hub</span><span>Reading: Textbook Ch. 1</span></div>
+    <h1>Chapter 9 <span>Drug Classifications</span> &amp; Formulations</h1>
+    <p>Listen to the lesson, review the summary, drill the drug cards, then take the quiz. Your course module exam needs 80%.</p>
+    <div class="sig"><span class="chip">18 min audio · 9 parts</span><span class="chip">40 questions</span><span class="chip">30 drug cards</span><span class="chip amber">Target 80%</span></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Lesson sections">
+    <button class="tab" role="tab" id="t-listen" data-tab="listen" aria-selected="true">Listen</button>
+    <button class="tab" role="tab" id="t-summary" data-tab="summary" aria-selected="false">Summary</button>
+    <button class="tab" role="tab" id="t-drugs" data-tab="drugs" aria-selected="false">Drug cards</button>
+    <button class="tab" role="tab" id="t-quiz" data-tab="quiz" aria-selected="false">Quiz</button>
+  </nav>
+
+  <!-- LISTEN -->
+  <section class="panel" id="p-listen" role="tabpanel" aria-labelledby="t-listen">
+    <div class="card player">
+      <div class="now"><div><div class="eyebrow" id="partNo">Part 1 of 9</div><h2 id="partTitle">Welcome and your goal</h2></div><div class="time"><span id="cur">0:00</span> / <span id="dur">18:02</span></div></div>
+      <div class="bar" id="bar" role="slider" aria-label="Seek" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="fill" id="fill"></div></div>
+      <div class="controls">
+        <button class="btn" id="back15" aria-label="Back 15 seconds">−15s</button>
+        <button class="play" id="play" aria-label="Play"><svg id="ico" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+        <button class="btn" id="fwd15" aria-label="Forward 15 seconds">+15s</button>
+        <div class="speed" id="speed" aria-label="Playback speed"></div>
+      </div>
+      <button class="autostart" id="autostart" hidden><b>▶ Tap to start the lesson</b><span>Your browser needs one tap before it plays sound. After that it reads on its own.</span></button>
+      <label class="autotoggle"><input type="checkbox" id="autoOn"> Start reading automatically when I open this page</label>
+      <audio id="audio" preload="auto" src="Ch9_audio.mp3"></audio>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Jump to a part</div>
+      <ol class="parts" id="parts"></ol>
+    </div>
+
+    <div class="card" style="display:grid;gap:10px">
+      <div class="eyebrow">Keep it</div>
+      <div class="downloads">
+        <button class="btn primary" id="dlMp3">⬇ Download MP3</button>
+        <button class="btn" id="dlPage">⬇ Download this page</button>
+      </div>
+      <p class="note" id="dlNote">Download MP3 saves the lesson audio to your phone or computer. Download this page saves one file with the audio built in, so it works with no internet.</p>
+    </div>
+
+    <div class="card"><details><summary>Read the transcript</summary><div class="transcript" id="transcript"></div></details></div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="panel" id="p-summary" role="tabpanel" aria-labelledby="t-summary" hidden>
+    <div class="card">
+      <div class="eyebrow">The big idea</div>
+      <p style="margin:0;max-width:68ch"><b>Pharmacotherapy</b> is treating disease with medicines. As a technician you should know, for common drugs: the <b>brand ↔ generic</b> name, <b>category</b>, <b>dosage forms</b>, <b>common side effects</b>, <b>key interactions</b>, and <b>storage</b>.</p>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Pharmacokinetics · what the body does to the drug</div>
+      <div class="adme">
+        <div><b>A</b>Absorption<br><span>Into the blood. IV skips it. Bioavailability = fraction that reaches blood.</span></div>
+        <div><b>D</b>Distribution<br><span>Into tissues. Fat-loving drugs = large volume, stay long.</span></div>
+        <div><b>M</b>Metabolism<br><span>Mostly liver, CYP 450 (e.g. 3A4). First-pass. Prodrugs activate.</span></div>
+        <div><b>E</b>Excretion<br><span>Urine, feces, lungs. Half-life = time to drop 50%.</span></div>
+      </div>
+      <p class="note" style="margin-top:10px"><b>Pharmacodynamics</b> is the reverse: what the drug does to the body (dose ↔ effect).</p>
+    </div>
+
+    <div class="sgrid">
+      <div class="card"><h3>Building blocks</h3><ul>
+        <li>Atomic number = protons. Mass number = protons + neutrons.</li>
+        <li>96% of the body: O, C, H, N.</li>
+        <li>Enzymes are proteins that speed reactions; 20 amino acids build proteins.</li>
+        <li>46 chromosomes per cell (23 from each parent). Genes code proteins.</li></ul></div>
+      <div class="card"><h3>11 organ systems</h3><ul>
+        <li>Integumentary, skeletal (206 bones), muscular, nervous, endocrine, cardiovascular, lymphatic, respiratory, digestive, urinary, reproductive.</li>
+        <li>Muscles: skeletal (voluntary), cardiac, smooth (involuntary).</li>
+        <li>Afferent → to brain. Efferent → from brain.</li>
+        <li>Pancreas: insulin ↓ glucose, glucagon ↑ glucose.</li></ul></div>
+      <div class="card"><h3>Body systems &amp; drugs</h3><ul>
+        <li>Stomach absorbs little (except alcohol); small intestine absorbs most.</li>
+        <li>Liver = main metabolizer; first-pass lowers bioavailability.</li>
+        <li>Kidneys excrete drugs, balance electrolytes, control BP.</li>
+        <li>Plasma minus clotting proteins = serum.</li></ul></div>
+      <div class="card"><h3>Disease words</h3><ul>
+        <li><b>Homeostasis</b> = balance. <b>Pathophysiology</b> = what goes wrong.</li>
+        <li><b>Epidemiology</b> = studying populations (food-poisoning example).</li>
+        <li><b>Risk factors</b> raise disease odds. <b>Pharmacogenomics</b> = genes guide dosing.</li>
+        <li>Treatments: lifestyle, cut risk factors, surgery, pharmacotherapy.</li></ul></div>
+      <div class="card"><h3>Dosage forms</h3><ul>
+        <li>Say tablet or capsule, not "pill". Capsules are cheapest to make.</li>
+        <li>Don't crush ER / CR / DR tablets.</li>
+        <li>Solution = clear. Suspension = never clear, <b>shake well</b>.</li>
+        <li>Syrup = sweet. Elixir = contains alcohol.</li>
+        <li>Cream = water-based. Ointment = oil-based. Not interchangeable.</li>
+        <li>Injectable suspensions: <b>IM only</b>, never IV.</li></ul></div>
+      <div class="card"><h3>Safety terms</h3><ul>
+        <li><b>Narrow therapeutic index</b>: digoxin, warfarin. Shelve strengths apart.</li>
+        <li><b>Side effect</b> = normal dose. <b>Toxic effect</b> = too much.</li>
+        <li><b>Contraindication</b> = don't use. <b>Precaution</b> = use with care.</li>
+        <li><b>Cross-sensitivity</b>: allergy to one penicillin → others.</li>
+        <li><b>Off-label</b> = use not approved by FDA.</li>
+        <li>Inducer speeds an enzyme; inhibitor slows it (erythromycin ↑ carbamazepine).</li></ul></div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Storage temperatures</div>
+      <div class="tbl"><table class="temps">
+        <tr><th>Condition</th><th>Celsius</th><th>Fahrenheit</th></tr>
+        <tr><td>Freezer</td><td>below 0°C</td><td>below 32°F</td></tr>
+        <tr><td>Refrigerator</td><td>2–8°C</td><td>36–46°F</td></tr>
+        <tr><td>Room temperature</td><td>15–30°C</td><td>59–86°F</td></tr>
+      </table></div>
+    </div>
+
+    <div class="warn">
+      <p style="margin:0 0 8px"><b>Watch on the exam</b></p>
+      <ul style="margin:0;padding-left:18px">
+        <li><b>Signs vs symptoms:</b> your textbook says signs = what the patient describes, symptoms = what the provider finds. Standard medical references reverse this. Use the textbook for your module exam; know the standard version for the PTCE.</li>
+        <li><b>Ranitidine (Zantac)</b> is still in the textbook table, but it was pulled from the US market in 2020.</li>
+        <li><b>Tramadol</b> is listed as "not an opiate," but it is a controlled substance (C-IV) that acts on opioid receptors.</li>
+        <li>Generic name must be at least <b>half the size</b> of the brand name on the label.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DRUGS -->
+  <section class="panel" id="p-drugs" role="tabpanel" aria-labelledby="t-drugs" hidden>
+    <div class="deck-tools">
+      <button class="btn" id="shuffle">Shuffle</button>
+      <button class="btn" id="flipAll">Flip all</button>
+      <button class="btn" id="modeBtn" aria-pressed="false">Show brand first</button>
+      <span class="note">Tap a card to flip it.</span>
+    </div>
+    <div class="deck" id="deck"></div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="panel" id="p-quiz" role="tabpanel" aria-labelledby="t-quiz" hidden>
+    <div class="card" id="quizBox"></div>
+    <div class="card key"><details id="keyDetails"><summary>Answer key (all 40)</summary><ol id="keyList" style="margin-top:12px"></ol></details></div>
+  </section>
+</div>
+
+<script>
+const MARKS = [{"title": "Welcome and your goal", "start": 0.0}, {"title": "The building blocks of the body", "start": 67.27}, {"title": "A tour of the organ systems", "start": 150.55}, {"title": "When something goes wrong", "start": 372.19}, {"title": "Pharmacokinetics: how drugs move through the body", "start": 491.42}, {"title": "Pharmacodynamics and strengths", "start": 617.23}, {"title": "Dosage forms", "start": 679.53}, {"title": "Drug names, categories, and safety", "start": 781.85}, {"title": "Exam review", "start": 991.81}];
+const TRANSCRIPT = [["Welcome and your goal", ["Welcome to Chapter 9: Drug Classifications and Formulations. Your reading for this chapter is Chapter 1 of your pharmacy technician textbook. This lesson walks through it in plain English, in eight short parts, with an exam review at the end.", "Medicines are powerful. The right drug at the right dose helps a patient. The wrong drug, or the wrong dose, can hurt them, and in some cases even cause death. That is why this chapter matters.", "Pharmacists study drugs for four full years. You do not need all of that. Your goal as a technician is three things. First: given a brand or generic name of a common drug, know the other name, the drug category, the dosage forms, the common side effects, the important interactions, and how it is stored. Second: for a common disease, know the over the counter and prescription options. Third: looking at a patient's drug list, spot possible problems, such as interactions, drugs that should not be taken together, which are called contraindications, and side effects to watch for.", "The use of medicines to treat disease has a name. It is called pharmacotherapy. Keep that word in mind."]], ["The building blocks of the body", ["Let's start small. The atom is the most basic unit of matter. It has a center, called the nucleus, with electrons circling around it, like planets around the sun. The nucleus holds protons, which have a positive charge, and neutrons, which have no charge.", "The number of protons decides what the atom is. This is called the atomic number. Carbon has 6 protons. Add one more, and it becomes nitrogen, with 7. The atomic mass number is protons plus neutrons. Carbon's mass number is 12.", "Here is a fact to remember. Ninety six percent of your body is made of just four elements: oxygen, carbon, hydrogen, and nitrogen.", "When an atom has extra neutrons, it can become unstable and give off radiation. That is the idea behind radioactive medicines.", "When two or more atoms join, they make a molecule. Water is H 2 O: two hydrogen atoms and one oxygen atom. The body is built mostly from sugars, called carbohydrates, fats, called lipids, and proteins. Proteins that help chemical reactions happen are called enzymes. Proteins are built from 20 amino acids.", "A cell is the smallest living unit. Its nucleus holds D N A, packed into chromosomes. Each person has 46 chromosomes in each cell, 23 from each parent. The sections of D N A that code for proteins are called genes."]], ["A tour of the organ systems", ["Cells group into tissues, tissues into organs, and organs that work together form organ systems. The body has 11 organ systems. Drugs are usually grouped by the organ system they treat, so this tour helps you sort drugs later.", "One. The integumentary system is the skin, hair, nails, and sweat glands. It protects the body, controls temperature, and makes a starter form of vitamin D when sunlight hits the skin. The skin has the thin outer epidermis, the thicker dermis under it, and the subcutaneous fat layer below. Skin is also a route for drugs, through injections under the skin and through patches.", "Two. The skeletal system: bones, cartilage, and joints. Adults have 206 bones. Bone marrow makes blood cells. Joints contain synovial fluid that keeps them moving smoothly.", "Three. The muscular system has three muscle types. Skeletal muscle moves bones and is voluntary. The nerve releases a chemical messenger called acetylcholine to tell it to move. Cardiac muscle makes the heart beat on its own. Smooth muscle lines blood vessels, airways, and the bladder, and is involuntary.", "Four. The nervous system. The central nervous system, or C N S, is the brain and spinal cord. The peripheral nervous system is every nerve outside of that. Afferent nerves carry messages to the brain. Efferent nerves carry messages away from the brain. The somatic system is voluntary. The autonomic system is automatic, and it has two sides, sympathetic and parasympathetic, which usually do opposite things, like speeding up or slowing down the heart.", "Five. The endocrine system is made of glands that release hormones, the body's chemical messengers. The master glands are the hypothalamus and the pituitary. The pineal gland makes melatonin, which helps you sleep. The thyroid controls metabolism. The adrenal glands make cortisol, aldosterone, and adrenaline. The pancreas makes insulin, which lowers blood sugar, and glucagon, which raises it.", "Six. The cardiovascular system: the heart, blood vessels, and blood. The heart has 4 chambers and 4 valves. Arteries carry oxygen rich blood away from the heart. Veins carry blood back. Tiny capillaries connect them. Blood has red blood cells that carry oxygen, white blood cells that fight infection, and platelets that help clotting. The liquid part is plasma. Plasma without clotting proteins is called serum.", "Seven. The lymphatic system fights infection and drains extra fluid. It makes T cells and B cells, and includes the lymph nodes, spleen, thymus, and tonsils.", "Eight. The respiratory system takes in oxygen and gets rid of carbon dioxide. The swap happens in tiny air sacs called alveoli. If carbon dioxide builds up, the blood becomes too acidic. So the lungs help keep the acid base balance.", "Nine. The digestive system. Very little is absorbed in the acidic stomach. One exception is alcohol, which is why it acts so fast. Most drugs and nutrients are absorbed in the small intestine. The liver is the body's main chemical factory. It breaks down drugs using enzymes called the cytochrome P 450 system. The gallbladder stores bile, which helps absorb fat.", "Ten. The urinary system: two kidneys, two ureters, the bladder, and the urethra. The kidneys filter the blood, balance electrolytes like sodium and potassium, help control blood pressure, and remove many drugs from the body.", "Eleven. The reproductive system. The ovaries make estrogen and progesterone. The testes make testosterone. The prostate gland helps make semen."]], ["When something goes wrong", ["If anatomy is a photo of the body, physiology is a movie. It is the study of how the body works. When everything is working in balance, we call it homeostasis. When that balance is disrupted, we call it disease.", "Disease can be caused by poisons, germs like bacteria, viruses, or fungi, lack of nutrients or oxygen, genetic problems, aging, or unknown causes. The study of what goes wrong in disease is called pathophysiology.", "Doctors make the diagnosis. Pharmacists are the treatment experts. As a technician, when a patient asks which over the counter product to use for a symptom, refer that question to the pharmacist.", "Risk factors are things about a person that raise their chances of a disease. Examples in your book: high blood pressure is more common in some families and populations, depression is more likely when close relatives have had it, and type 2 diabetes risk goes up with an inactive lifestyle and with age.", "Pharmacogenomics means using a person's genes to choose drugs and doses. For example, a patient with fewer liver enzymes may break a drug down slowly and need a lower dose.", "Now a key exam point, and a tricky one. Your textbook defines signs as subjective clues, meaning what the patient describes, and symptoms as objective clues, meaning what the provider finds in an exam or lab test. Be careful. Most medical references define it the other way around: a symptom is what the patient feels, and a sign is what can be measured. For your course's module exam, follow your textbook. For other exams, know the standard definition.", "Epidemiology studies large groups of people, not single patients. Think of food poisoning at a big event. By comparing who ate what, investigators find the dish that caused it.", "Disease can be treated four ways: lifestyle changes, reducing risk factors like tobacco and alcohol, surgery, and pharmacotherapy, which is treatment with medicines."]], ["Pharmacokinetics: how drugs move through the body", ["Pharmacokinetics is what the body does to the drug. It follows four steps. Remember them as A D M E: absorption, distribution, metabolism, and excretion.", "A is for absorption. This is how the drug gets into the blood. A tablet first breaks apart into small pieces. That is disintegration. Then the drug dissolves into the stomach and intestinal fluids. That is dissolution. Only then can it be absorbed. Intravenous drugs skip absorption completely, because they go straight into the blood.", "Bioavailability is the share of a dose that actually reaches the blood. If you take 1 gram and 0.9 grams reaches the blood, the bioavailability is 0.9, or 90 percent.", "Drugs absorbed from the gut go to the liver first. The liver may break down a big part of the dose before it ever reaches the rest of the body. This is called first pass metabolism. High first pass means low bioavailability. Sometimes it works the other way: an inactive drug becomes active in the liver. That kind of drug is called a prodrug.", "D is for distribution. This is how the drug travels through the blood into tissues. A drug that moves heavily into fat has a large volume of distribution, and it tends to stay in the body a long time.", "M is for metabolism. This is how the body chemically changes the drug, mostly in the liver, using C Y P 450 enzymes such as 3 A 4. Most metabolism turns an active drug into an inactive one. Many drug interactions happen here, when two drugs use the same enzyme.", "E is for excretion. This is how the drug leaves the body, mostly in urine or stool, and sometimes through the lungs. Clearance is how much drug is removed over time. Half life is the time it takes for the drug level in the blood to drop by half.", "Alcohol is the perfect example of all four steps. It is absorbed fast from the stomach, it travels to the brain, where it slows things down, it is metabolized to acetaldehyde, and some leaves in the breath. That is why a breath test can estimate blood alcohol."]], ["Pharmacodynamics and strengths", ["Pharmacodynamics is the opposite view. It is what the drug does to the body. It links the drug level to the effect. Usually, more drug means more effect.", "Alcohol shows this clearly. At about 50 milligrams per deciliter, a person feels good. At 100, speech, balance, and reaction time start to slip. At 150, there is severe motor impairment. Between 150 and 250, nausea sets in. At about 300, the person passes out. At about 400, coma, and death can follow if breathing stops.", "Now, strength. The strength is the amount of drug in one unit, such as diazepam 5 milligram tablets, or amoxicillin suspension 150 milligrams per 5 milliliters. Always pick the correct strength.", "Some drugs, like digoxin and warfarin, have a narrow therapeutic index. That means a dose that helps one patient can be toxic for another. Pharmacies often shelve different strengths of these drugs apart from each other to prevent picking the wrong one."]], ["Dosage forms", ["The dosage form is the shape a drug comes in. Here are the ones to know.", "Solids. True pills are rarely made today, so call them tablets or capsules. Tablets are compressed powder. They can be swallowed, chewed, placed under the tongue, which is sublingual, or placed between the cheek and gum, which is buccal. Never crush timed release, controlled release, or delayed release tablets unless the label says it is okay. Capsules are gelatin shells, and they are the cheapest and easiest solid form to make.", "Liquids. In a solution, the drug is fully dissolved, so it is clear, though not always colorless. A suspension has tiny particles floating in liquid. It is never clear, and it must be shaken well before measuring a dose. Syrups are sweetened. Elixirs contain alcohol.", "Topicals. Creams are water based and wash off easily. Ointments are oil based and resist water. They are not interchangeable, so dispense exactly what was prescribed. Lotions are emulsions with two phases, water and oil. Transdermal patches deliver drug through the skin. If a patient asks whether a patch can be cut, check with the pharmacist.", "Suppositories stay solid at room temperature and melt inside the body. They are used rectally, vaginally, and rarely in the urethra. They help patients who are vomiting and cannot keep a tablet down.", "Injectables. Most injectable drugs are sterile solutions. Injectable suspensions are given only into the muscle, never into a vein or artery, because the particles can block tiny blood vessels and cause serious harm or death. Some long acting depot injections last 3 to 4 weeks. Injectable lipid emulsions provide fat to patients fed through the vein."]], ["Drug names, categories, and safety", ["Every drug has two kinds of names. The generic name is given by the United States Adopted Names program, called U S A N. By law, it must appear on the label at least half the size of the brand name. The brand name, also called the trade or proprietary name, is chosen by the company. For example, Premarin comes from pregnant mare's urine.", "Generic names give you clues. Drugs in the same class often share an ending. Statins end in statin, like atorvastatin, and they lower cholesterol. A C E inhibitors end in pril, like lisinopril. A R Bs end in sartan, like losartan. Beta blockers end in olol, like metoprolol. Proton pump inhibitors end in prazole, like omeprazole. Benzodiazepines often end in pam or lam, like diazepam and alprazolam. S S R I antidepressants include sertraline and fluoxetine.", "Here are some drugs your textbook flags as important. Benzodiazepines are controlled substances, and long use can lead to dependence. S S R Is can take 4 to 6 weeks to work, and should be stopped slowly. Warfarin interacts with many drugs, and bleeding is the main risk of all blood thinners. Metformin, for type 2 diabetes, should be avoided in kidney disease. Statins: patients should avoid grapefruit juice and report muscle pain. Quinolone antibiotics like ciprofloxacin can cause tendon rupture. Metronidazole: no alcohol during treatment and for 3 days after. Sulfamethoxazole with trimethoprim, known as Bactrim, contains sulfa, so it cannot be used with a sulfa allergy. Alendronate must be taken with a full glass of water, and the patient must not lie down afterward. Naloxone nasal spray reverses an opioid overdose: one spray in one nostril, call 911, and give a second spray in the other nostril if there is no response.", "Common uses. The F D A approves certain uses, called approved indications. When a prescriber uses a drug for something else, it is called off label use.", "Adverse effects, also called side effects, happen at normal doses. Toxic effects happen when too much drug is given.", "A contraindication means a drug should not be used in a certain patient. For example, decongestants can raise blood pressure and blood sugar, so patients with high blood pressure or diabetes should check with their doctor first. Allergy is another contraindication. Cross sensitivity means a patient allergic to one drug may react to similar drugs, like the penicillins. Precautions mean use with care, especially in pregnancy, newborns, children, the elderly, and patients with liver or kidney disease.", "Storage temperatures are a must know. Frozen is below 0 degrees Celsius, or 32 Fahrenheit. Refrigerated is 2 to 8 Celsius, or 36 to 46 Fahrenheit. Room temperature is 15 to 30 Celsius, or 59 to 86 Fahrenheit. If a patient says a drug changed color, it may have been left in a hot car.", "Drug interactions. One drug can block the absorption of another. For example, antacids bind quinolone antibiotics. But most interactions happen in the liver. Some drugs speed up an enzyme, which is called inducing. Others slow it down, which is called inhibiting. Erythromycin inhibits C Y P 3 A 4, so it can raise carbamazepine levels to toxic amounts. Food and herbal products can interact too. The pharmacist, with your help, screens for these."]], ["Exam review", ["Here is your quick exam review.", "Pharmacotherapy is treating disease with medicines.", "Ninety six percent of the body is oxygen, carbon, hydrogen, and nitrogen. There are 11 organ systems and 206 bones.", "Insulin lowers blood sugar. Glucagon raises it. Both come from the pancreas.", "Homeostasis is balance. Pathophysiology is the study of what goes wrong. Epidemiology studies large groups.", "In your textbook, signs are what the patient describes, and symptoms are what the provider finds. Standard medical references reverse this.", "Pharmacokinetics is what the body does to the drug: absorption, distribution, metabolism, excretion. Pharmacodynamics is what the drug does to the body.", "Bioavailability is the fraction of a dose that reaches the blood. Intravenous drugs skip absorption. First pass metabolism happens in the liver. A prodrug is inactive until the body activates it.", "Half life is the time for the drug level to drop by half.", "Narrow therapeutic index drugs include digoxin and warfarin.", "Shake suspensions. Never put injectable suspensions into a vein. Do not crush extended release tablets. Creams are water based, ointments are oil based.", "Refrigerator: 2 to 8 Celsius. Room temperature: 15 to 30 Celsius. Freezer: below 0 Celsius.", "That's the end of Chapter 9, Drug Classifications and Formulations. Try the quiz next. Good luck, you've got this."]]];
+const store = {
+  get(k,d){try{const v=localStorage.getItem('ch9_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem('ch9_'+k,JSON.stringify(v))}catch(e){}}
+};
+const $=s=>document.querySelector(s);
+const fmt=t=>{t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')};
+function toast(msg){const d=document.createElement('div');d.className='toast';d.textContent=msg;document.body.appendChild(d);setTimeout(()=>d.remove(),3200)}
+
+/* tabs */
+const tabs=[...document.querySelectorAll('.tab')];
+function showTab(name){tabs.forEach(t=>{const on=t.dataset.tab===name;t.setAttribute('aria-selected',on);$('#p-'+t.dataset.tab).hidden=!on});store.set('tab',name)}
+tabs.forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
+const hash=location.hash.slice(1);
+showTab(['listen','summary','drugs','quiz'].includes(hash)?hash:store.get('tab','listen'));
+
+/* player */
+const audio=$('#audio'), TOTAL=1082.61;
+const partsEl=$('#parts');
+MARKS.forEach((m,i)=>{const li=document.createElement('li');const b=document.createElement('button');b.innerHTML='<span class="n">'+(i===MARKS.length-1?'★':String(i+1).padStart(2,'0'))+'</span><span></span><span class="t">'+fmt(m.start)+'</span>';b.children[1].textContent=m.title;b.onclick=()=>{audio.currentTime=m.start;const p=audio.play();if(p&&p.catch)p.catch(()=>{})};li.appendChild(b);partsEl.appendChild(li);
+  const tick=document.createElement('div');tick.className='tick';tick.style.left=(m.start/TOTAL*100)+'%';if(i)$('#bar').appendChild(tick)});
+const partBtns=[...partsEl.querySelectorAll('button')];
+function curPart(t){let k=0;MARKS.forEach((m,i)=>{if(t>=m.start-0.2)k=i});return k}
+let lastPart=-1,lastSave=0;
+function update(){const t=audio.currentTime,d=audio.duration||TOTAL;$('#cur').textContent=fmt(t);$('#dur').textContent=fmt(d);$('#fill').style.width=(t/d*100)+'%';$('#bar').setAttribute('aria-valuenow',Math.round(t/d*100));
+  const k=curPart(t);if(k!==lastPart){lastPart=k;$('#partNo').textContent=k===MARKS.length-1?'Exam review':'Part '+(k+1)+' of '+(MARKS.length-1);$('#partTitle').textContent=MARKS[k].title;partBtns.forEach((b,i)=>b.classList.toggle('on',i===k))}
+  if(Math.abs(t-lastSave)>4){lastSave=t;store.set('pos2',t)}}
+audio.addEventListener('timeupdate',update);
+audio.addEventListener('loadedmetadata',()=>{const p=store.get('pos2',0);if(p>5&&p<audio.duration-5){audio.currentTime=p;toast('Resuming where you stopped: '+fmt(p))}update()});
+const ico=$('#ico');
+audio.addEventListener('play',()=>{ico.innerHTML='<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>';$('#play').setAttribute('aria-label','Pause')});
+audio.addEventListener('pause',()=>{ico.innerHTML='<path d="M7 4.5v15l13-7.5z"/>';$('#play').setAttribute('aria-label','Play');store.set('pos2',audio.currentTime)});
+$('#play').onclick=()=>{if(audio.paused){const p=audio.play();if(p&&p.catch)p.catch(()=>toast('The audio could not start. Reload the page and tap Play again.'))}else audio.pause()};
+audio.addEventListener('error',()=>toast('The audio file did not load. Reload the page.'));
+$('#back15').onclick=()=>audio.currentTime=Math.max(0,audio.currentTime-15);
+$('#fwd15').onclick=()=>audio.currentTime=Math.min(audio.duration||TOTAL,audio.currentTime+15);
+function seek(e){const r=$('#bar').getBoundingClientRect();audio.currentTime=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))*(audio.duration||TOTAL)}
+$('#bar').addEventListener('pointerdown',e=>{seek(e);$('#bar').setPointerCapture(e.pointerId)});
+$('#bar').addEventListener('pointermove',e=>{if(e.buttons)seek(e)});
+$('#bar').addEventListener('keydown',e=>{if(e.key==='ArrowRight')audio.currentTime+=5;if(e.key==='ArrowLeft')audio.currentTime-=5});
+const speeds=[0.75,1,1.25,1.5];const sp=$('#speed');
+function setSpeed(v){audio.playbackRate=v;store.set('speed',v);[...sp.children].forEach(b=>b.setAttribute('aria-pressed',+b.dataset.v===v))}
+speeds.forEach(v=>{const b=document.createElement('button');b.dataset.v=v;b.textContent=v+'×';b.onclick=()=>setSpeed(v);sp.appendChild(b)});
+setSpeed(store.get('speed',1));
+
+/* auto-play on open: try right away; if the browser blocks sound, start on the first tap anywhere */
+const autoOn=$('#autoOn'),autoBtn=$('#autostart');
+autoOn.checked=store.get('auto',true);
+autoOn.onchange=()=>{store.set('auto',autoOn.checked);if(!autoOn.checked)disarm()};
+const SKIP='#play,#back15,#fwd15,.speed,.bar,.parts,.tabs,.downloads,.autotoggle,a,input,summary';
+function firstTap(e){if(e.target.closest&&e.target.closest(SKIP))return;startNow()}
+function disarm(){autoBtn.hidden=true;document.removeEventListener('pointerdown',firstTap,true);document.removeEventListener('keydown',firstKey,true)}
+function firstKey(e){if(e.code==='Space'||e.key==='Enter'){if(e.target.closest&&e.target.closest(SKIP))return;e.preventDefault();e.stopPropagation();startNow()}}
+function startNow(){disarm();if(audio.paused){const p=audio.play();if(p&&p.catch)p.catch(()=>toast('The audio could not start. Tap Play.'))}}
+function armTap(){autoBtn.hidden=false;document.addEventListener('pointerdown',firstTap,true);document.addEventListener('keydown',firstKey,true)}
+autoBtn.onclick=startNow;
+audio.addEventListener('play',disarm);
+let autoTried=false;
+function tryAuto(){if(autoTried||!autoOn.checked||!audio.paused)return;
+  if(!location.hash)showTab('listen');else if($('#p-listen').hidden)return;autoTried=true;
+  const p=audio.play();if(p&&p.catch)p.catch(()=>armTap())}
+if(audio.readyState>=1)setTimeout(tryAuto,300);else audio.addEventListener('loadedmetadata',()=>setTimeout(tryAuto,300),{once:true});
+document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea'))return;if(e.code==='Space'&&!$('#p-listen').hidden&&!e.target.closest('button')){e.preventDefault();$('#play').click()}});
+update();
+
+/* transcript */
+const tr=$('#transcript');
+TRANSCRIPT.forEach(([title,paras],i)=>{const h=document.createElement('h3');h.textContent=(i===TRANSCRIPT.length-1?'':'Part '+(i+1)+'. ')+title;tr.appendChild(h);paras.forEach(p=>{const e=document.createElement('p');e.textContent=p;tr.appendChild(e)})});
+
+/* downloads */
+async function audioBytes(){if(audio.src.startsWith('data:')){const bin=atob(audio.src.split(',')[1]);const u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return u}
+  const r=await fetch(audio.getAttribute('src'));if(!r.ok)throw new Error('fetch');return new Uint8Array(await r.arrayBuffer())}
+function toB64(u){let s='';for(let i=0;i<u.length;i+=0x8000)s+=String.fromCharCode.apply(null,u.subarray(i,i+0x8000));return btoa(s)}
+const CRC=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+function crc32(u){let c=0xFFFFFFFF;for(let i=0;i<u.length;i++)c=CRC[(c^u[i])&255]^(c>>>8);return(c^0xFFFFFFFF)>>>0}
+function zipOne(name,data){const nm=new TextEncoder().encode(name),crc=crc32(data),sz=data.length;
+  const lh=new DataView(new ArrayBuffer(30));lh.setUint32(0,0x04034b50,true);lh.setUint16(4,20,true);lh.setUint16(8,0,true);lh.setUint32(14,crc,true);lh.setUint32(18,sz,true);lh.setUint32(22,sz,true);lh.setUint16(26,nm.length,true);
+  const ch=new DataView(new ArrayBuffer(46));ch.setUint32(0,0x02014b50,true);ch.setUint16(4,20,true);ch.setUint16(6,20,true);ch.setUint32(16,crc,true);ch.setUint32(20,sz,true);ch.setUint32(24,sz,true);ch.setUint16(28,nm.length,true);ch.setUint32(42,0,true);
+  const cdOff=30+nm.length+sz,cdSize=46+nm.length;
+  const eo=new DataView(new ArrayBuffer(22));eo.setUint32(0,0x06054b50,true);eo.setUint16(8,1,true);eo.setUint16(10,1,true);eo.setUint32(12,cdSize,true);eo.setUint32(16,cdOff,true);
+  return new Blob([lh,nm,data,ch,nm,eo],{type:'application/zip'})}
+const MP3='Ch9_Drug_Classifications_Audio_Lesson.mp3';
+async function pageHtml(){const u=await audioBytes();const root=document.documentElement.cloneNode(true);root.querySelector('#audio').setAttribute('src','data:audio/mpeg;base64,'+toB64(u));root.querySelectorAll('.toast').forEach(x=>x.remove());return '<!doctype html>\n'+root.outerHTML}
+function localSave(name,blob){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000)}
+let dl=null;
+(async()=>{try{dl=window.claude&&window.claude.use?await window.claude.use('downloads'):null}catch(e){dl=null}
+  if(!dl&&!(window.claude&&window.claude.use)){$('#dlNote').textContent='Saved copy: the MP3 button saves a plain .mp3 file to your Downloads.'}})();
+async function save(name,data){try{await dl.save({filename:name,data});toast('Saved '+name)}catch(e){if(e&&e.code==='declined')return;toast(e&&e.code==='rate_limited'?'A save box is already open.':'Saving isn\'t available in this view.')}}
+$('#dlMp3').onclick=async()=>{try{const u=await audioBytes();if(dl)save(MP3.replace('.mp3','.zip'),zipOne(MP3,u));else localSave(MP3,new Blob([u],{type:'audio/mpeg'}))}catch(e){toast('Could not load the audio file. Reload the page and try again.')}};
+$('#dlPage').onclick=async()=>{try{toast('Preparing the page…');const b=new Blob([await pageHtml()],{type:'text/html'});if(dl)save('Ch9_Drug_Classifications_Lesson.html',b);else localSave('Ch9_Drug_Classifications_Lesson.html',b)}catch(e){toast('Could not build the page file. Reload and try again.')}};
+
+/* drug deck */
+const DRUGS=[
+["alprazolam","Xanax","Benzodiazepine (CS)","Anxiety, panic. Long use → dependence; taper off."],
+["zolpidem","Ambien","Sleep agent (CS)","Insomnia. Dizziness, lethargy."],
+["sertraline","Zoloft","SSRI antidepressant","Depression, OCD, panic, anxiety. 4–6 weeks to work; taper."],
+["fluoxetine","Prozac","SSRI antidepressant","Depression, OCD, panic, bulimia."],
+["bupropion","Wellbutrin / Zyban","Antidepressant","Depression, smoking cessation. Rare: seizures. XR forms not interchangeable."],
+["trazodone","Desyrel","Antidepressant","Used more for insomnia (sedating)."],
+["quetiapine","Seroquel","Antipsychotic","Schizophrenia, bipolar mania. Sedation, weight gain."],
+["hydrocodone/APAP","Norco, Vicodin","Opioid analgesic (CS)","Pain. Sedation, constipation; high dose slows breathing."],
+["naloxone","Narcan","Opioid reversal","1 spray in 1 nostril, call 911; 2nd spray other nostril if no response."],
+["gabapentin","Neurontin","Antiepileptic","Add-on for seizures, nerve pain. Commonly abused."],
+["phenytoin","Dilantin","Antiepileptic","Monitor blood levels. Don't swap brands or tabs/caps."],
+["methylphenidate","Ritalin, Concerta","ADHD stimulant (CS)","ADHD, narcolepsy. May slow growth in kids."],
+["ondansetron","Zofran","Antiemetic","N/V from chemo, radiation, surgery."],
+["cetirizine","Zyrtec","Antihistamine","Allergies, hives. OTC."],
+["montelukast","Singulair","Leukotriene antagonist","Asthma, allergic rhinitis."],
+["albuterol","ProAir, Ventolin","Beta-agonist","Asthma rescue. Fast heart rate, tremor."],
+["omeprazole","Prilosec","Proton pump inhibitor","GERD, ulcers. Ending: -prazole."],
+["metformin","Glucophage","Diabetes (type 2)","Diarrhea, nausea. Rare lactic acidosis. Avoid in kidney disease, CHF."],
+["insulin glargine","Lantus","Insulin (long-acting)","Type 1 & 2. Risk: low blood sugar."],
+["levothyroxine","Synthroid","Thyroid hormone","Don't change brands without prescriber."],
+["lisinopril","Zestril, Prinivil","ACE inhibitor","HTN, CHF. Dry cough, angioedema. Avoid in pregnancy. Ending: -pril."],
+["losartan","Cozaar","ARB","HTN, diabetic kidney. Less cough than ACEi. Ending: -sartan."],
+["amlodipine","Norvasc","Calcium channel blocker","HTN, angina. Ankle swelling."],
+["metoprolol","Lopressor, Toprol","Beta-blocker","HTN, angina, MI, CHF. Slow heart rate. Ending: -olol."],
+["atorvastatin","Lipitor","Statin","Cholesterol. No grapefruit juice; report muscle pain."],
+["warfarin","Coumadin","Anticoagulant","Narrow therapeutic index. Many interactions. Bleeding risk."],
+["furosemide","Lasix","Loop diuretic","Edema, CHF, HTN. Electrolyte loss; rare hearing loss."],
+["ciprofloxacin","Cipro","Quinolone antibiotic","Tendon rupture risk. Antacids block absorption."],
+["sulfamethoxazole/TMP","Bactrim","Sulfa antibiotic","UTI. Contains sulfa: not for sulfa allergy."],
+["alendronate","Fosamax","Osteoporosis","Full glass of water; stay upright."]];
+let brandFirst=false,order=DRUGS.map((_,i)=>i);
+function renderDeck(){const d=$('#deck');d.innerHTML='';order.forEach(i=>{const [g,b,c,k]=DRUGS[i];const el=document.createElement('button');el.className='flip';el.setAttribute('aria-label','Flip card');
+  const front=brandFirst?b:g,sub=brandFirst?'':'';
+  el.innerHTML='<div class="in"><div class="face"><div class="cls"></div><div class="g"></div><div class="hint">Tap to reveal</div></div><div class="face back"><div class="cls"></div><div class="g" style="font-size:17px"></div><div class="b"></div><div class="k"></div></div></div>';
+  const f=el.querySelectorAll('.face');f[0].querySelector('.cls').textContent=brandFirst?'Brand':'Generic';f[0].querySelector('.g').textContent=front;
+  f[1].querySelector('.cls').textContent=c;f[1].querySelector('.g').textContent=brandFirst?g:b;f[1].querySelector('.b').textContent=brandFirst?'generic':'brand';f[1].querySelector('.k').textContent=k;
+  el.onclick=()=>el.classList.toggle('on');d.appendChild(el)})}
+$('#shuffle').onclick=()=>{order.sort(()=>Math.random()-.5);renderDeck()};
+$('#flipAll').onclick=()=>{const c=[...document.querySelectorAll('.flip')];const any=c.some(x=>!x.classList.contains('on'));c.forEach(x=>x.classList.toggle('on',any))};
+$('#modeBtn').onclick=e=>{brandFirst=!brandFirst;e.target.setAttribute('aria-pressed',brandFirst);e.target.textContent=brandFirst?'Show generic first':'Show brand first';renderDeck()};
+renderDeck();
+
+/* quiz */
+const QS=[
+["What is pharmacotherapy?",["The study of drug chemistry","The use of medications to treat disease","Making drugs in a lab","Surgery combined with medicine"],1,"Pharmacotherapy = treating disease with medications."],
+["The atomic number of an element equals its number of:",["Neutrons","Electrons plus neutrons","Protons","Protons plus neutrons"],2,"Atomic number = protons. Mass number = protons + neutrons."],
+["96% of the human body is made of which four elements?",["Oxygen, carbon, hydrogen, nitrogen","Calcium, iron, sodium, potassium","Carbon, sulfur, iodine, oxygen","Hydrogen, helium, carbon, calcium"],0,"O, C, H, N make up 96% of the body."],
+["Proteins that help chemical reactions happen are called:",["Hormones","Enzymes","Lipids","Chromosomes"],1,"Enzymes are proteins that make reactions happen."],
+["How many chromosomes are in each human cell?",["23","44","46","48"],2,"46 chromosomes, 23 from each parent."],
+["How many organ systems does the body have?",["7","9","11","13"],2,"The textbook lists 11 organ systems."],
+["Which organ system includes the skin, hair, nails, and sweat glands?",["Lymphatic","Integumentary","Endocrine","Skeletal"],1,"Integumentary = skin, hair, nails, sweat glands."],
+["How many bones does an adult have?",["106","186","206","256"],2,"206 bones; about 106 are in the hands and feet."],
+["Which muscle type is under voluntary control?",["Cardiac","Smooth","Skeletal","All three"],2,"Skeletal muscle is voluntary. Cardiac and smooth are involuntary."],
+["Nerves that carry information TO the brain are called:",["Efferent","Afferent","Somatic","Motor"],1,"Afferent = arrive at the brain. Efferent = exit from the brain."],
+["Which hormone LOWERS blood glucose?",["Glucagon","Cortisol","Insulin","Melatonin"],2,"Insulin lowers glucose; glucagon raises it. Both come from the pancreas."],
+["The pineal gland secretes:",["Thyroid hormone","Melatonin","Adrenaline","Estrogen"],1,"Melatonin induces sleep."],
+["Blood vessels that carry blood AWAY from the heart are:",["Veins","Capillaries","Arteries","Venae cavae"],2,"Arteries carry blood away from the heart."],
+["Plasma without clotting proteins is called:",["Serum","Lymph","Platelets","Hemoglobin"],0,"Serum = plasma minus clotting proteins."],
+["Most drugs and nutrients are absorbed in the:",["Stomach","Small intestine","Large intestine","Esophagus"],1,"Most absorption happens in the small intestine. Alcohol is the stomach exception."],
+["The liver enzyme system involved in many drug interactions is:",["ACE","CYP 450","COX-2","MAO"],1,"Cytochrome P450 enzymes (like CYP 3A4) metabolize many drugs."],
+["A normal, balanced state of the body is called:",["Pathophysiology","Homeostasis","Epidemiology","Pharmacodynamics"],1,"Homeostasis = balance. Disease disrupts it."],
+["The study of what goes wrong in a disease is:",["Physiology","Anatomy","Pathophysiology","Pharmacokinetics"],2,"Pathophysiology studies abnormal function in disease."],
+["According to YOUR TEXTBOOK, subjective clues (what the patient describes) are called:",["Symptoms","Signs","Risk factors","Indications"],1,"The textbook calls subjective clues signs. Most medical references reverse this; follow your textbook for the module exam."],
+["Finding the dish that caused food poisoning at a big event is an example of:",["Pharmacogenomics","Epidemiology","Pharmacodynamics","Physiology"],1,"Epidemiology studies large groups of people."],
+["Using a patient's genes to choose drugs and doses is called:",["Pharmacogenomics","Pharmacokinetics","Epidemiology","Bioavailability"],0,"Pharmacogenomics links genes to drug response."],
+["The four steps of pharmacokinetics are:",["Absorption, distribution, metabolism, excretion","Assessment, diagnosis, medication, evaluation","Administration, dosing, monitoring, education","Absorption, digestion, movement, elimination"],0,"ADME."],
+["Which route skips absorption?",["Oral","Transdermal","Intravenous","Rectal"],2,"IV goes straight into the blood."],
+["A tablet breaking into small particles is called:",["Dissolution","Disintegration","Distribution","Excretion"],1,"Disintegration first; then dissolution into fluids."],
+["If 0.9 g of a 1 g dose reaches the blood, the bioavailability is:",["9%","10%","90%","100%"],2,"0.9 ÷ 1 = 0.9 = 90%."],
+["A drug that is inactive until the body metabolizes it into an active form is a:",["Metabolite","Prodrug","Generic","Placebo"],1,"Prodrugs are activated by metabolism."],
+["The time for the drug level in the blood to drop by one-half is its:",["Clearance","Half-life","Bioavailability","Volume of distribution"],1,"Half-life = time to decline by 50%."],
+["Pharmacodynamics is best described as:",["What the body does to the drug","What the drug does to the body","How drugs are manufactured","How drugs are priced"],1,"Pharmacokinetics = body → drug. Pharmacodynamics = drug → body."],
+["At about what blood alcohol level is consciousness lost?",["50 mg/dL","100 mg/dL","300 mg/dL","500 mg/dL"],2,"About 300 mg/dL. Coma around 400 mg/dL."],
+["Which two drugs are examples of a narrow therapeutic index?",["Amoxicillin and cephalexin","Digoxin and warfarin","Loratadine and cetirizine","Omeprazole and famotidine"],1,"Digoxin and warfarin: small margin between helpful and toxic."],
+["Which liquid dosage form must ALWAYS be shaken before measuring?",["Solution","Syrup","Suspension","Elixir"],2,"Suspensions have particles that settle."],
+["Which liquid contains alcohol?",["Syrup","Elixir","Suspension","Solution"],1,"Elixirs contain alcohol; syrups are sweetened."],
+["Which topical is water-based and washes off easily?",["Ointment","Cream","Paste","Patch"],1,"Creams are water-based; ointments are oil-based."],
+["Injectable suspensions may be given:",["IV only","Into an artery","IM (into muscle) only","Any route"],2,"Never IV or intra-arterial: particles can block small vessels."],
+["The generic name on a label must be at least what size compared to the brand name?",["The same size","Half the size","One-quarter the size","Any size"],1,"FDA requires at least half the size."],
+["Using a drug for a condition the FDA did not approve is called:",["Contraindicated","Off-label","Toxic","Over the counter"],1,"Off-label (unapproved) use."],
+["Refrigerator storage temperature is:",["−20 to 0°C","2–8°C","15–30°C","30–40°C"],1,"2–8°C (36–46°F)."],
+["Room temperature storage is:",["2–8°C","8–15°C","15–30°C","30–40°C"],2,"15–30°C (59–86°F)."],
+["Erythromycin inhibits CYP 3A4. Taken with carbamazepine, it will likely:",["Lower carbamazepine levels","Raise carbamazepine levels","Have no effect","Cure the infection faster"],1,"Inhibiting the enzyme slows breakdown, so carbamazepine builds up."],
+["A patient reports a sulfa allergy. Which drug should be flagged?",["Amoxicillin","Bactrim (sulfamethoxazole/trimethoprim)","Azithromycin","Ciprofloxacin"],1,"Bactrim contains sulfa."]];
+const N=QS.length;
+function renderKey(){const k=$('#keyList');QS.forEach(q=>{const li=document.createElement('li');const p=document.createElement('div');p.textContent=q[0];const a=document.createElement('div');a.className='a';a.textContent=q[1][q[2]];const e=document.createElement('div');e.className='note';e.textContent=q[3];li.append(p,a,e);k.appendChild(li)})}
+renderKey();
+let run=null;
+function startRun(ids){run={ids,i:0,right:0,missed:[]};renderQ()}
+function home(){const missed=store.get('missed',[]);const best=store.get('best',null);const b=$('#quizBox');b.innerHTML='';
+  const h=document.createElement('div');h.style.display='grid';h.style.gap='12px';
+  h.innerHTML='<div class="eyebrow">Chapter 9 quiz</div><h2 style="font-size:24px">40 questions · pass at 80% (32 right)</h2><p class="note" id="bestLine"></p><div class="downloads" id="qbtns"></div>';
+  b.appendChild(h);$('#bestLine').textContent=best==null?'Missed questions are saved so you can retake just those.':'Best score so far: '+best+'%. Saved missed questions: '+missed.length+'.';
+  const all=document.createElement('button');all.className='btn primary';all.textContent='Start full quiz';all.onclick=()=>startRun([...Array(N).keys()].sort(()=>Math.random()-.5));
+  const m=document.createElement('button');m.className='btn';m.textContent='Retake missed ('+missed.length+')';m.disabled=!missed.length;m.onclick=()=>startRun(missed.slice());
+  $('#qbtns').append(all,m)}
+function renderQ(){const b=$('#quizBox');const qi=run.ids[run.i];const q=QS[qi];b.innerHTML='';
+  const wrap=document.createElement('div');wrap.style.display='grid';wrap.style.gap='14px';
+  wrap.innerHTML='<div class="qhead"><span class="eyebrow" style="margin:0">Question '+(run.i+1)+' of '+run.ids.length+'</span><span class="time">'+run.right+' correct</span></div><div class="meter"><i style="width:'+(run.i/run.ids.length*100)+'%"></i></div><p class="q"></p><div class="opts"></div><div class="fb"></div>';
+  b.appendChild(wrap);wrap.querySelector('.q').textContent=q[0];
+  const opts=wrap.querySelector('.opts');
+  q[1].forEach((t,j)=>{const o=document.createElement('button');o.className='opt';o.textContent=String.fromCharCode(65+j)+'.  '+t;o.onclick=()=>answer(j,opts,wrap,qi);opts.appendChild(o)})}
+function answer(j,opts,wrap,qi){const q=QS[qi];[...opts.children].forEach((o,k)=>{o.disabled=true;if(k===q[2])o.classList.add('right');else if(k===j)o.classList.add('wrong')});
+  const ok=j===q[2];if(ok)run.right++;else run.missed.push(qi);
+  const fb=wrap.querySelector('.fb');fb.innerHTML='<div class="explain"><b></b> <span></span></div><div style="margin-top:12px"><button class="btn primary" id="next"></button></div>';
+  fb.querySelector('b').textContent=ok?'Correct.':'Not quite.';fb.querySelector('span').textContent=q[3];
+  const nx=fb.querySelector('#next');nx.textContent=run.i<run.ids.length-1?'Next question':'See my score';nx.onclick=()=>{run.i++;run.i<run.ids.length?renderQ():finish()};nx.focus()}
+function finish(){const pct=Math.round(run.right/run.ids.length*100);const full=run.ids.length===N;
+  let missed=store.get('missed',[]);if(full)missed=run.missed.slice();else missed=missed.filter(x=>run.missed.includes(x)||!run.ids.includes(x));store.set('missed',missed);
+  if(full)store.set('best',Math.max(pct,store.get('best',0)));
+  const b=$('#quizBox');b.innerHTML='';const w=document.createElement('div');w.style.display='grid';w.style.gap='12px';
+  w.innerHTML='<div class="eyebrow">'+(full?'Full quiz':'Missed-question retake')+'</div><div class="score">'+pct+'%</div><div><span class="pill '+(pct>=80?'pass':'fail')+'">'+(pct>=80?'Meets the 80% target':'Below 80%. Review and retake')+'</span></div><p class="note">'+run.right+' of '+run.ids.length+' correct. '+missed.length+' question(s) saved for review.</p><div class="downloads" id="fbtn"></div>';
+  b.appendChild(w);const again=document.createElement('button');again.className='btn primary';again.textContent='Back to quiz start';again.onclick=home;$('#fbtn').appendChild(again)}
+home();
+
+/* ---------- GitHub Pages add-ons ---------- */
+/* Lock-screen / car / headphone controls */
+if('mediaSession' in navigator){
+  const ms=navigator.mediaSession;
+  function meta(){try{ms.metadata=new MediaMetadata({title:MARKS[curPart(audio.currentTime)].title,artist:'Ch 9 Drug Classifications & Formulations',album:'PTCE Study Hub',artwork:[{src:'icon-192.png',sizes:'192x192',type:'image/png'},{src:'icon-512.png',sizes:'512x512',type:'image/png'}]})}catch(e){}}
+  meta();
+  let lp=-2;audio.addEventListener('timeupdate',()=>{const k=curPart(audio.currentTime);if(k!==lp){lp=k;meta()}
+    try{if(audio.duration)ms.setPositionState({duration:audio.duration,playbackRate:audio.playbackRate,position:Math.min(audio.currentTime,audio.duration)})}catch(e){}});
+  const set=(a,f)=>{try{ms.setActionHandler(a,f)}catch(e){}};
+  set('play',()=>audio.play());set('pause',()=>audio.pause());
+  set('seekbackward',d=>audio.currentTime=Math.max(0,audio.currentTime-((d&&d.seekOffset)||15)));
+  set('seekforward',d=>audio.currentTime=Math.min(audio.duration||TOTAL,audio.currentTime+((d&&d.seekOffset)||15)));
+  set('seekto',d=>{if(d&&d.seekTime!=null)audio.currentTime=d.seekTime});
+  set('previoustrack',()=>{const k=curPart(audio.currentTime);const t=MARKS[k].start;audio.currentTime=(audio.currentTime-t>3||k===0)?t:MARKS[k-1].start});
+  set('nexttrack',()=>{const k=curPart(audio.currentTime);if(k<MARKS.length-1)audio.currentTime=MARKS[k+1].start});
+}
+/* Offline: cache the page and the audio after the first visit */
+if('serviceWorker' in navigator && location.protocol==='https:'){
+  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').then(()=>{
+    if(!store.get('offlineToast',false)){store.set('offlineToast',true);setTimeout(()=>toast('Saved for offline. Next time it plays without internet.'),4000)}
+  }).catch(()=>{})});
+}
+</script>
+
+</body></html>
